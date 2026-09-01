@@ -20,5 +20,25 @@ root.style.setProperty('--textSixSteps', textSix);
 
 const textSeven = document.getElementById('textSeven').innerText.length;
 root.style.setProperty('--textSevenSteps', textSeven);
+const textEight = document.getElementById("textEight").innerText.length;
+root.style.setProperty("--textEightSteps", textEight);
+
+const textNine = document.getElementById("textNine").innerText.length;
+root.style.setProperty("--textNineSteps", textNine);
+
+const textTen = document.getElementById("textTen").innerText.length;
+root.style.setProperty("--textTenSteps", textTen);
+
+const textEleven = document.getElementById("textEleven").innerText.length;
+root.style.setProperty("--textElevenSteps", textEleven);
+
+const textTwelve = document.getElementById("textTwelve").innerText.length;
+root.style.setProperty("--textTwelveSteps", textTwelve);
+
+const textThirteen = document.getElementById("textThirteen").innerText.length;
+root.style.setProperty("--textThirteenSteps", textThirteen);
+
+const textFourteen = document.getElementById("textFourteen").innerText.length;
+root.style.setProperty("--textFourteenSteps", textFourteen);
 
 let totalCallTime = 1276;
