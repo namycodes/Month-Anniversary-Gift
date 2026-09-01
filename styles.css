@@ -1,34 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-	--typeWriterSpeed: 4s;
-	--mainColor: #c21e56;
+--typeWriterSpeed: 4s;
+--mainColor: #c21e56;
 
-	--textOneSteps: ;
-	--textTwoSteps: ;
-	--textThreeSteps: ;
-	--textFourSteps: ;
-	--textFiveSteps: ;
-	--textSixSteps: ;
-	--textSevenSteps: ;
 
-	--textOneDelay: 2s;
-	--textTwoDelay: 9s;
-	--textThreeDelay: 16s;
-	--textFourDelay: 23s;
-	--textFiveDelay: 30s;
-	--textSixDelay: 37s;
-	--textSevenDelay: 44s;
+--textOneSteps: 1;
+--textTwoSteps: 1;
+--textThreeSteps: 1;
+--textFourSteps: 1;
+--textFiveSteps: 1;
+--textSixSteps: 1;
+--textSevenSteps: 1;
+--textEightSteps: 1;
+--textNineSteps: 1;
+--textTenSteps: 1;
+--textElevenSteps: 1;
+--textTwelveSteps: 1;
+--textThirteenSteps: 1;
+--textFourteenSteps: 1;
+
+--textOneDelay: 2s;
+--textTwoDelay: 9s;
+--textThreeDelay: 16s;
+--textFourDelay: 23s;
+--textFiveDelay: 30s;
+--textSixDelay: 37s;
+--textSevenDelay: 44s;
+--textEightDelay: 51s;
+--textNineDelay: 58s;
+--textTenDelay: 65s;
+--textElevenDelay: 72s;
+--textTwelveDelay: 79s;
+--textThirteenDelay: 86s;
+--textFourteenDelay: 93s;
+
+
 }
 
 body {
-	margin: 0;
-	background-color: var(--mainColor);
-	font-family: 'Roboto Mono', monospace;
-	min-height: 100vh;
-	display: grid;
-	place-content: center;
-	text-align: center;
+margin: 0;
+background-color: var(--mainColor);
+font-family: 'Roboto Mono', monospace;
+min-height: 100vh;
+display: grid;
+place-content: center;
+text-align: center;
+padding: 20px;
+box-sizing: border-box;
 }
 
 h2,
@@ -38,14 +57,29 @@ h2,
 #textFour,
 #textFive,
 #textSix,
-#textSeven {
-	font-size: 16px;
-	color: white;
-	position: relative;
-	text-align: left;
-	width: max-content;
-	padding: 2.5px 0 2.5px 0;
+#textSeven,
+#textEight,
+#textNine,
+#textTen,
+#textEleven,
+#textTwelve,
+#textThirteen,
+#textFourteen {
+font-size: 16px;
+color: white;
+position: relative;
+text-align: left;
+width: max-content;
+max-width: 90vw;
+padding: 2.5px 0;
+margin-left: auto;
+margin-right: auto;
+box-sizing: border-box;
 }
+
+/* --------------------------------
+TYPEWRITER OVERLAY
+-------------------------------- */
 
 #textOne::before,
 #textTwo::before,
@@ -54,156 +88,376 @@ h2,
 #textFive::before,
 #textSix::before,
 #textSeven::before,
+#textEight::before,
+#textNine::before,
+#textTen::before,
+#textEleven::before,
+#textTwelve::before,
+#textThirteen::before,
+#textFourteen::before {
+content: '';
+position: absolute;
+inset: 0;
+background: var(--mainColor);
+}
+
+/* --------------------------------
+CURSOR
+-------------------------------- */
+
 #textOne::after,
 #textTwo::after,
 #textThree::after,
 #textFour::after,
 #textFive::after,
 #textSix::after,
-#textSeven::after {
-	content: '';
-	position: absolute;
-	inset: 0;
+#textSeven::after,
+#textEight::after,
+#textNine::after,
+#textTen::after,
+#textEleven::after,
+#textTwelve::after,
+#textThirteen::after,
+#textFourteen::after {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 0.1em;
+background: white;
+opacity: 0;
 }
 
+/* --------------------------------
+TEXT ONE
+-------------------------------- */
+
 #textOne::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textOneDelay) steps(var(--textOneSteps))
-		forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textOneDelay)
+steps(var(--textOneSteps)) forwards;
 }
 
 #textOne::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textOneDelay) steps(var(--textOneSteps))
-			forwards,
-		blink 750ms steps(var(--textOneSteps)) 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textOneDelay)
+steps(var(--textOneSteps)) forwards,
+blink 750ms var(--textOneDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT TWO
+-------------------------------- */
+
 #textTwo::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textTwoDelay) steps(var(--textTwoSteps))
-		forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textTwoDelay)
+steps(var(--textTwoSteps)) forwards;
 }
 
 #textTwo::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textTwoDelay) steps(var(--textTwoSteps))
-			forwards,
-		blink 750ms steps(var(--textTwoSteps)) 7s 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textTwoDelay)
+steps(var(--textTwoSteps)) forwards,
+blink 750ms var(--textTwoDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT THREE
+-------------------------------- */
+
 #textThree::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textThreeDelay) steps(var(--textThreeSteps)) forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textThreeDelay)
+steps(var(--textThreeSteps)) forwards;
 }
 
 #textThree::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textThreeDelay) steps(var(--textThreeSteps)) forwards,
-		blink 750ms steps(var(--textThreeSteps)) 14s 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textThreeDelay)
+steps(var(--textThreeSteps)) forwards,
+blink 750ms var(--textThreeDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT FOUR
+-------------------------------- */
+
 #textFour::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textFourDelay) steps(var(--textFourSteps)) forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textFourDelay)
+steps(var(--textFourSteps)) forwards;
 }
 
 #textFour::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textFourDelay) steps(var(--textFourSteps)) forwards,
-		blink 750ms steps(var(--textFourSteps)) 21s 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textFourDelay)
+steps(var(--textFourSteps)) forwards,
+blink 750ms var(--textFourDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT FIVE
+-------------------------------- */
+
 #textFive::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textFiveDelay) steps(var(--textFiveSteps)) forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textFiveDelay)
+steps(var(--textFiveSteps)) forwards;
 }
 
 #textFive::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textFiveDelay) steps(var(--textFiveSteps)) forwards,
-		blink 750ms steps(var(--textFiveSteps)) 28s 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textFiveDelay)
+steps(var(--textFiveSteps)) forwards,
+blink 750ms var(--textFiveDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT SIX
+-------------------------------- */
+
 #textSix::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textSixDelay) steps(var(--textSixSteps)) forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textSixDelay)
+steps(var(--textSixSteps)) forwards;
 }
 
 #textSix::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textSixDelay) steps(var(--textSixSteps)) forwards,
-		blink 750ms steps(var(--textSixSteps)) 35s 9;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textSixDelay)
+steps(var(--textSixSteps)) forwards,
+blink 750ms var(--textSixDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT SEVEN
+-------------------------------- */
+
 #textSeven::before {
-	background: var(--mainColor);
-	animation: typewriter var(--typeWriterSpeed) var(--textSevenDelay) steps(var(--textSevenSteps)) forwards;
+animation:
+typewriter var(--typeWriterSpeed) var(--textSevenDelay)
+steps(var(--textSevenSteps)) forwards;
 }
 
 #textSeven::after {
-	width: 0.1em;
-	background: transparent;
-	animation: typewriter var(--typeWriterSpeed) var(--textSevenDelay) steps(var(--textSevenSteps)) forwards,
-		blink 750ms steps(var(--textSevenSteps)) 42s infinite;
+animation:
+cursorMove var(--typeWriterSpeed) var(--textSevenDelay)
+steps(var(--textSevenSteps)) forwards,
+blink 750ms var(--textSevenDelay) 5 forwards;
 }
 
+/* --------------------------------
+TEXT EIGHT
+-------------------------------- */
+
+#textEight::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textEightDelay)
+steps(var(--textEightSteps)) forwards;
+}
+
+#textEight::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textEightDelay)
+steps(var(--textEightSteps)) forwards,
+blink 750ms var(--textEightDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT NINE
+-------------------------------- */
+
+#textNine::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textNineDelay)
+steps(var(--textNineSteps)) forwards;
+}
+
+#textNine::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textNineDelay)
+steps(var(--textNineSteps)) forwards,
+blink 750ms var(--textNineDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT TEN
+-------------------------------- */
+
+#textTen::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textTenDelay)
+steps(var(--textTenSteps)) forwards;
+}
+
+#textTen::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textTenDelay)
+steps(var(--textTenSteps)) forwards,
+blink 750ms var(--textTenDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT ELEVEN
+-------------------------------- */
+
+#textEleven::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textElevenDelay)
+steps(var(--textElevenSteps)) forwards;
+}
+
+#textEleven::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textElevenDelay)
+steps(var(--textElevenSteps)) forwards,
+blink 750ms var(--textElevenDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT TWELVE
+-------------------------------- */
+
+#textTwelve::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textTwelveDelay)
+steps(var(--textTwelveSteps)) forwards;
+}
+
+#textTwelve::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textTwelveDelay)
+steps(var(--textTwelveSteps)) forwards,
+blink 750ms var(--textTwelveDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT THIRTEEN
+-------------------------------- */
+
+#textThirteen::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textThirteenDelay)
+steps(var(--textThirteenSteps)) forwards;
+}
+
+#textThirteen::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textThirteenDelay)
+steps(var(--textThirteenSteps)) forwards,
+blink 750ms var(--textThirteenDelay) 5 forwards;
+}
+
+/* --------------------------------
+TEXT FOURTEEN
+-------------------------------- */
+
+#textFourteen::before {
+animation:
+typewriter var(--typeWriterSpeed) var(--textFourteenDelay)
+steps(var(--textFourteenSteps)) forwards;
+}
+
+#textFourteen::after {
+animation:
+cursorMove var(--typeWriterSpeed) var(--textFourteenDelay)
+steps(var(--textFourteenSteps)) forwards,
+blink 750ms var(--textFourteenDelay) 5 forwards;
+}
+
+/* --------------------------------
+ANIMATIONS
+-------------------------------- */
+
 @keyframes typewriter {
-	to {
-		left: 100%;
-	}
+to {
+left: 100%;
+}
+}
+
+@keyframes cursorMove {
+to {
+left: 100%;
+}
 }
 
 @keyframes blink {
-	to {
-		background: white;
-	}
+0%,
+49% {
+opacity: 1;
 }
 
+
+50%,
+100% {
+    opacity: 0;
+}
+
+
+}
+
+/* --------------------------------
+RESPONSIVE
+-------------------------------- */
+
 @media only screen and (min-width: 576px) {
-	h2,
-	#textOne,
-	#textTwo,
-	#textThree,
-	#textFour,
-	#textFive,
-	#textSix,
-	#textSeven,
-	#textSeven {
-		font-size: 22px;
-	}
+h2,
+#textOne,
+#textTwo,
+#textThree,
+#textFour,
+#textFive,
+#textSix,
+#textSeven,
+#textEight,
+#textNine,
+#textTen,
+#textEleven,
+#textTwelve,
+#textThirteen,
+#textFourteen {
+font-size: 22px;
+}
 }
 
 @media only screen and (min-width: 720px) {
-	h2,
-	#textOne,
-	#textTwo,
-	#textThree,
-	#textFour,
-	#textFive,
-	#textSix,
-	#textSeven,
-	#textSeven {
-		font-size: 26px;
-	}
+h2,
+#textOne,
+#textTwo,
+#textThree,
+#textFour,
+#textFive,
+#textSix,
+#textSeven,
+#textEight,
+#textNine,
+#textTen,
+#textEleven,
+#textTwelve,
+#textThirteen,
+#textFourteen {
+font-size: 26px;
+}
 }
 
 @media only screen and (min-width: 992px) {
-	h2,
-	#textOne,
-	#textTwo,
-	#textThree,
-	#textFour,
-	#textFive,
-	#textSix,
-	#textSeven,
-	#textSeven {
-		font-size: 30px;
-	}
-} 
+h2,
+#textOne,
+#textTwo,
+#textThree,
+#textFour,
+#textFive,
+#textSix,
+#textSeven,
+#textEight,
+#textNine,
+#textTen,
+#textEleven,
+#textTwelve,
+#textThirteen,
+#textFourteen {
+font-size: 30px;
+}
+}
