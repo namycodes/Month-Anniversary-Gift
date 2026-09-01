@@ -1,44 +1,47 @@
-let root = document.documentElement;
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
 
-const textOne = document.getElementById('textOne').innerText.length;
-root.style.setProperty('--textOneSteps', textOne);
+  const textOne = document.getElementById("textOne").innerText.length;
+  root.style.setProperty("--textOneSteps", textOne);
 
-const textTwo = document.getElementById('textTwo').innerText.length;
-root.style.setProperty('--textTwoSteps', textTwo);
+  const textTwo = document.getElementById("textTwo").innerText.length;
+  root.style.setProperty("--textTwoSteps", textTwo);
 
-const textThree = document.getElementById('textThree').innerText.length;
-root.style.setProperty('--textThreeSteps', textThree);
+  const textThree = document.getElementById("textThree").innerText.length;
+  root.style.setProperty("--textThreeSteps", textThree);
 
-const textFour = document.getElementById('textFour').innerText.length;
-root.style.setProperty('--textFourSteps', textFour);
+  const textFour = document.getElementById("textFour").innerText.length;
+  root.style.setProperty("--textFourSteps", textFour);
 
-const textFive = document.getElementById('textFive').innerText.length;
-root.style.setProperty('--textFiveSteps', textFive);
+  const textFive = document.getElementById("textFive").innerText.length;
+  root.style.setProperty("--textFiveSteps", textFive);
 
-const textSix = document.getElementById('textSix').innerText.length;
-root.style.setProperty('--textSixSteps', textSix);
+  const textSix = document.getElementById("textSix").innerText.length;
+  root.style.setProperty("--textSixSteps", textSix);
 
-const textSeven = document.getElementById('textSeven').innerText.length;
-root.style.setProperty('--textSevenSteps', textSeven);
-const textEight = document.getElementById("textEight").innerText.length;
-root.style.setProperty("--textEightSteps", textEight);
+  const textSeven = document.getElementById("textSeven").innerText.length;
+  root.style.setProperty("--textSevenSteps", textSeven);
 
-const textNine = document.getElementById("textNine").innerText.length;
-root.style.setProperty("--textNineSteps", textNine);
+  const textEight = document.getElementById("textEight").innerText.length;
+  root.style.setProperty("--textEightSteps", textEight);
 
-const textTen = document.getElementById("textTen").innerText.length;
-root.style.setProperty("--textTenSteps", textTen);
+  const textNine = document.getElementById("textNine").innerText.length;
+  root.style.setProperty("--textNineSteps", textNine);
 
-const textEleven = document.getElementById("textEleven").innerText.length;
-root.style.setProperty("--textElevenSteps", textEleven);
+  const textTen = document.getElementById("textTen").innerText.length;
+  root.style.setProperty("--textTenSteps", textTen);
 
-const textTwelve = document.getElementById("textTwelve").innerText.length;
-root.style.setProperty("--textTwelveSteps", textTwelve);
+  const textEleven = document.getElementById("textEleven").innerText.length;
+  root.style.setProperty("--textElevenSteps", textEleven);
 
-const textThirteen = document.getElementById("textThirteen").innerText.length;
-root.style.setProperty("--textThirteenSteps", textThirteen);
+  const textTwelve = document.getElementById("textTwelve").innerText.length;
+  root.style.setProperty("--textTwelveSteps", textTwelve);
 
-const textFourteen = document.getElementById("textFourteen").innerText.length;
-root.style.setProperty("--textFourteenSteps", textFourteen);
+  const textThirteen = document.getElementById("textThirteen").innerText.length;
+  root.style.setProperty("--textThirteenSteps", textThirteen);
 
-let totalCallTime = 1276;
+  const textFourteen = document.getElementById("textFourteen").innerText.length;
+  root.style.setProperty("--textFourteenSteps", textFourteen);
+
+  let totalCallTime = 1276;
+});
